@@ -4,3 +4,101 @@
   box-sizing: border-box;
 }
 
+
+/* DEBUG */
+
+.debug {
+  border: 1px solid black;
+}
+
+.debug1 {
+  border: 1px solid black;
+  background-color: brown;
+}
+
+.debug2 {
+  border: 1px solid black;
+  background-color: blueviolet;
+}
+
+.debug3 {
+  border: 1px solid black;
+  background-color: cadetblue;
+}
+
+.debug-width {
+  width: 100%;
+}
+
+.debug-height {
+  height: 100%;
+}
+
+/* ////DEBUG */
+
+/* ------------------------GENERAL------------------------ */
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+/* -------------------------HEADER------------------------ */
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+.top-menu {
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.341);
+  position: fixed;
+  width: calc(100% - 230px);
+  
+}
+/* ---------------------------MAIN------------------------ */
+
+
+main {
+  height: calc(100vh - 90px);
+  overflow: auto;
+}
+
+main .left-menu {
+  width: 230px;
+  height: calc(100vh - 90px);
+  position: sticky;
+  top: 0;
+}
+
+
+
+.main-container {
+ padding-top: 90px;
+ width: calc(100% - 230px);
+ 
+}
+
+/* -------------------------FOOTER------------------------ */
+
+footer {
+  height: 90px;
+}
