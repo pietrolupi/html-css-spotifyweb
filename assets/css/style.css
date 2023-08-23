@@ -73,8 +73,8 @@ img {
   height: 90px;
   background-color: rgba(0, 0, 0, 0.341);
   position: fixed;
-  width: calc(100% - 230px);
-  margin-left: 230px;
+  top: 0;
+  width: 100%;
   
 }
 /* ---------------------------MAIN------------------------ */
@@ -88,16 +88,41 @@ main .left-menu {
 
 .main-content {
   background-color: green;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 90px);
   width: calc(100% - 230px);
-  margin-top: 90px;
+  padding-top: 90px;
   overflow: auto;
+  
  
- 
+}
+
+.content-card {
+  margin: 10px;
+}
+.content-card img {
+  width: calc(100% / 6)
 }
 
 /* -------------------------FOOTER------------------------ */
 
 footer {
   height: 90px;
+}
+
+
+
+
+
+
+
+
+/* -------------------------MOBILE------------------------ */
+
+@media  screen and (max-width:480px) {
+  main .left-menu {
+    width: 45px;
+  }
+  .main-content {
+    width: calc(100% - 45px);
+  }
 }
