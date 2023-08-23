@@ -131,16 +131,33 @@ main .left-menu {
   color: white;
   font-size: 1.5rem;
   font-weight: 800;
+}
+
+.main-content h3:nth-child(3) {
   margin: 20px 0 30px 0;
 }
 
-.main-content .recently-played {
+.main-content h3:nth-child(5),
+h3:nth-child(8) {
+  margin: 20px 0 10px 0;
+}
+
+.main-content>span {
+  color: #7d7f84;
+  padding-left: 20px;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.main-content .recently-played,
+.main-content .created-for,
+.main-content .popular-artists {
   width: 100%;
   padding: 0 10px;
 }
 
 
-.recently-played .content-card {
+.content-card {
   width: calc((100% - 150px) / 6);
   margin: 0 10px;
   color: white;
@@ -148,17 +165,25 @@ main .left-menu {
   font-weight: 800;
   padding-bottom: 12px;
 }
-.recently-played .content-card img {
+.content-card img {
   padding-bottom: 15px;
 }
-.recently-played .content-card h4 {
+.content-card h4 {
   padding: 0px 0;
 }
 
-.recently-played .content-card span {
+.content-card span {
   color: #7d7f84 ;
   font-size: 0.7rem;
   font-weight: 800;
+}
+
+.main-content>span {
+  padding-bottom:30px ;
+}
+
+.popular-artists img {
+  border-radius: 50%;
 }
 
 
@@ -212,7 +237,7 @@ footer {
 
 @media  screen and (max-width:880px) {
 
-.recently-played .content-card {
+.content-card {
   width: calc((100% - 150px) / 4);
   margin: 0 10px;
 }
@@ -231,9 +256,13 @@ footer {
     width: calc(100% - 190px);
   }
 
-  .recently-played .content-card {
+  .content-card {
     width: calc((100% - 40px) / 2);
     margin: 0 10px;
+  }
+
+  .white-btn {
+    right: 190px;
   }
 }
 
@@ -247,6 +276,9 @@ footer {
   }
   .main-content {
     width: calc(100% - 45px);
+  }
+  .white-btn {
+    right: 45px;
   }
 }
 /* ------------------------------------------------------- */
