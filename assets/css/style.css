@@ -97,9 +97,12 @@ main .left-menu {
   
 }
 
-.left-menu .top>img {
+.logo-big{
   width: 80%;
   padding: 20px;
+}
+.logo-small {
+  display: none;
 }
 .left-menu .top a span {
   vertical-align: middle;
@@ -161,7 +164,7 @@ main .left-menu {
  
 }
 
-.left-menu .bottom span:first-child {
+.left-menu .bottom .install {
   font-size: 0.8rem;
   font-weight: 700;
   color: #a3a3a3;
@@ -319,8 +322,58 @@ h3:nth-child(8) {
 footer {
   height: 90px;
   background-color: #282828;
+  justify-content: space-between;
+  
 }
 
+footer .left {
+  height: 100%;
+  width: 230px;
+  
+}
+footer .left a p {
+  color: #a3a3a3;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+footer .left .icons {
+  margin-left: 45px;
+}
+
+footer .left img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 17px;
+}
+footer .middle {
+  width: 50%;
+  
+}
+
+footer .right {
+  width: 225px;
+  color: #c1c1c1;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+footer .right .volume-bar {
+  width:115px ;
+  height:3px;
+  border-radius: 5px;
+  background-color: #5a5a5a;
+  position: relative;
+}
+
+footer .right .volume {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #c1c1c1;
+}
 
 
 /* -------------------------Medium------------------------ */
@@ -370,6 +423,42 @@ footer {
   .white-btn {
     right: 45px;
   }
+
+  .logo-big {
+    display: none;
+  }
+  .logo-small{
+    display: block;
+    width: 27px;
+  }
+  .left-menu span,
+  .left-menu .top li span,
+  .left-menu .middle li,
+  .left-menu h3,
+  .left-menu .top>a i {
+    display: none;
+  } 
+
+  .left-menu .top li a {
+    padding: 0;
+  }
+
+  .top {
+    padding: 10px;
+  }
+  .small-line {
+    display: none;
+  }
+  .left-menu .bottom {
+    padding: 0;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 }
 /* ------------------------------------------------------- */
+
 
