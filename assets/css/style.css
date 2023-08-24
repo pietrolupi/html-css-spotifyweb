@@ -348,32 +348,80 @@ footer .left img {
 }
 footer .middle {
   width: 50%;
-  
+  padding: 15px 0;
+  justify-content: space-between;
+  color: white;
+}
+
+footer .middle .player {
+  color: white;
+  font-size: 1.2rem;
+}
+
+footer .middle .player i {
+  margin: 0 15px;
+}
+
+footer .middle .player i:nth-child(3) {
+  font-size: 2rem;
+}
+
+footer .middle .volume-dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: calc(40% - 10px);
+  top: calc(100% - 10px);
+  background-color: #c1c1c1;
+}
+footer .time-bar {
+  width: 100%;
+}
+footer .time-bar span {
+  padding: 0 20px;
+}
+footer .middle .volume-bar {
+  width: 60%;
+}
+
+footer .middle .volume {
+  width: 40%;
 }
 
 footer .right {
   width: 225px;
   color: #c1c1c1;
-  padding: 0 10px;
-  justify-content: space-between;
+  padding-right: 15px;
 }
 
-footer .right .volume-bar {
-  width:115px ;
+footer .right i {
+  padding: 0 10px;
+}
+
+footer .volume-bar {
   height:3px;
   border-radius: 5px;
   background-color: #5a5a5a;
   position: relative;
 }
 
-footer .right .volume {
-  width: 20%;
+footer .right .volume-bar {
+  width:115px ; 
+}
+
+.volume {
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   background-color: #c1c1c1;
 }
+footer .right .volume {
+  width: 20%;
+  
+}
+
 
 
 /* -------------------------Medium------------------------ */
@@ -462,3 +510,8 @@ footer .right .volume {
 /* ------------------------------------------------------- */
 
 
+/* EFFETTI */
+
+.left-menu .top li a:hover {
+  border-left: 5px solid green;
+}
