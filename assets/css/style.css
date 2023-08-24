@@ -263,19 +263,28 @@ h3:nth-child(8) {
 }
 .content-card .img-container {
   position: relative;
-  display: block;
+  
 }
 .content-card h4 {
   margin-top: 15px;
 }
-
+.img-container img {
+  display: block;
+}
 .mask {
-  height: calc(100% - 4px);
+  height: 100%;
   width: 100%;
   background-color: #00000053;
   position: absolute;
   top: 0;
   display: none;
+}
+
+.content-card .fa-circle-play {
+  position: absolute;
+  font-size: 4rem;
+  display: none;
+  
 }
 .img-container:hover .mask {
   display: block;
@@ -578,4 +587,9 @@ footer .right .volume {
 .white-btn:hover {
   scale: 1.1;
   margin-right: 20px;
+}
+
+.img-container:hover .fa-circle-play {
+  display: block;
+  z-index: 999;
 }
