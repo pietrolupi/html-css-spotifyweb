@@ -110,6 +110,7 @@ main .left-menu {
 .left-menu .top li {
   margin: 10px 0;
 }
+
 .left-menu .top li a {
   padding-left: 20px;
   
@@ -131,13 +132,15 @@ main .left-menu {
 .left-menu .top>a {
   margin: 0 20px;
 }
-.left-menu .top>a i {
+
+.left-menu .playlist i {
   color: black;
   background-color: #a3a3a3;
   padding: 10px; 
+  margin-left: 20px;
 }
 
-.left-menu .top>a span {
+.left-menu .playlist span {
   color: #a3a3a3;
   font-weight: 600;
   font-size: 0.95rem;
@@ -164,7 +167,7 @@ main .left-menu {
  
 }
 
-.left-menu .bottom .install {
+.left-menu .bottom .install a {
   font-size: 0.8rem;
   font-weight: 700;
   color: #a3a3a3;
@@ -258,8 +261,23 @@ h3:nth-child(8) {
   font-weight: 800;
   padding-bottom: 12px;
 }
-.content-card img {
-  padding-bottom: 15px;
+.content-card .img-container {
+  position: relative;
+}
+.content-card h4 {
+  margin-top: 15px;
+}
+
+.mask {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.img-container:hover .mask {
+  display: block;
 }
 .content-card h4 {
   padding: 0px 0;
@@ -286,30 +304,24 @@ h3:nth-child(8) {
 .white-btn {
   
   color: white;
-  position: absolute;
-  right: 235px;
   border: 1px solid white;
   border-radius: 50px;
   padding: 10px 30px;
   font-size: 0.8rem;
   font-weight: 600;
+  margin-right: 10px;
 }
 .top-menu {
   height: 90px;
   background-color: rgba(0, 0, 0, 0.489);
   position: fixed;
   top: 0;
-  width: 100%;
+  right: 0;
+  width: calc(100% - 230px);
+  justify-content: flex-end;
  
 }
 
-.btn-container {
-  width: 100%;
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 
 
 /* ---------------- */
@@ -443,9 +455,12 @@ footer .right .volume {
   main .left-menu {
     width: 190px;
   }
-  .main-content {
+  .main-content,
+  .top-menu {
     width: calc(100% - 190px);
   }
+
+  
 
   .content-card {
     width: calc((100% - 40px) / 2);
@@ -465,12 +480,11 @@ footer .right .volume {
   main .left-menu {
     width: 45px;
   }
-  .main-content {
+  .main-content,
+  .top-menu{
     width: calc(100% - 45px);
   }
-  .white-btn {
-    right: 45px;
-  }
+  
 
   .logo-big {
     display: none;
@@ -483,7 +497,8 @@ footer .right .volume {
   .left-menu .top li span,
   .left-menu .middle li,
   .left-menu h3,
-  .left-menu .top>a i {
+  .left-menu .top>a i,
+  .left-menu .playlist {
     display: none;
   } 
 
@@ -513,5 +528,53 @@ footer .right .volume {
 /* EFFETTI */
 
 .left-menu .top li a:hover {
-  border-left: 5px solid green;
+  border-left: 3px solid #adff2f;
+  padding-left: 17px;
+  color: white;
+}
+
+.greenline {
+  height: 3px;
+  width: 65%;
+  background-color:  #adff2f;
+  border-radius: 10px;
+  margin-top: 5px;
+  display:none;
+}
+
+.main-content .row .col:hover .greenline {
+  display: block;
+}
+
+.main-content .row .col:hover {
+  padding: 25px 20px 17px 20px;
+}
+
+.main-content .row .col:hover a {
+  color: white;
+}
+
+.middle li:hover a {
+  color: white;
+}
+
+.left-menu .top a {
+  color: #a3a3a3;
+}
+
+.playlist:hover i {
+  background-color: white;
+}
+
+.playlist:hover span {
+  color: white;
+}
+
+.left-menu .bottom .install a:hover {
+  color: white;
+} 
+
+.white-btn:hover {
+  scale: 1.1;
+  margin-right: 20px;
 }
