@@ -263,7 +263,10 @@ h3:nth-child(8) {
 }
 .content-card .img-container {
   position: relative;
-  
+  overflow: hidden;
+}
+.popular-artists .img-container {
+  border-radius: 50%;
 }
 .content-card h4 {
   margin-top: 15px;
@@ -329,7 +332,7 @@ h3:nth-child(8) {
   right: 0;
   width: calc(100% - 230px);
   justify-content: flex-end;
- 
+ z-index: 999;
 }
 
 
@@ -591,5 +594,9 @@ footer .right .volume {
 
 .img-container:hover .fa-circle-play {
   display: block;
-  z-index: 999;
+  z-index: 998;
+}
+
+.img-container:hover {
+  cursor: pointer;
 }
